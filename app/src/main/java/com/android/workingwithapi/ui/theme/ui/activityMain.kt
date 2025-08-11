@@ -9,14 +9,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.dp
 import java.nio.file.WatchEvent
+import com.android.workingwithapi.R
+
+data class Subject (
+         val nameOfTheSubject: String,
+        val idOfTheSubject: Int,
+        val icon: Int
+        )
 
 @Composable
-fun activityMain(){
-    Column(
-        modifier = Modifier.padding(5.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-
-    }
+fun activityMain(modifier: Modifier = Modifier){
+    val subjectList = listOf(
+        Subject("General Knowledge", 9, R.drawable.general_knowledge),
+        Subject("Books", 10, R.drawable.books),
+        Subject("Video Games", 15, R.drawable.games),
+        Subject("Math", 19, R.drawable.math)
+    )
 }
